@@ -11,7 +11,12 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://task-management-system-ci2ch5joi.vercel.app/tasks', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
+  credentials: true, 
+}));
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
