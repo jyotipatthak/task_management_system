@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.login = exports.register = void 0;
+exports.tokenRefresh = exports.login = exports.register = void 0;
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const user_1 = __importDefault(require("../models/user"));
@@ -49,10 +49,32 @@ const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const token = jsonwebtoken_1.default.sign({ id: user.id }, process.env.JWT_SECRET, {
             expiresIn: '1h',
         });
-        res.status(200).json({ token });
+        const refreshToken = jsonwebtoken_1.default.sign({ id: user.id }, process.env.JWT_SECRET, {
+            expiresIn: '1m',
+        });
+        res.status(200).json({ token, refreshToken });
     }
     catch (error) {
         res.status(500).json({ message: 'Error logging in', error });
     }
 });
 exports.login = login;
+const tokenRefresh = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    var _a;
+    try {
+        const prevRefreshToken = (_a = req.header('Authorization')) === null || _a === void 0 ? void 0 : _a.replace('Bearer ', '');
+        if (!prevRefreshToken) {
+            return res.status(401).json({ message: 'No token, authorization denied' });
+        }
+        const decoded = jsonwebtoken_1.default.verify(prevRefreshToken, process.env.JWT_SECRET);
+        const user = decoded;
+        const token = jsonwebtoken_1.default.sign({ id: user.id }, process.env.JWT_SECRET, {
+            expiresIn: '1h',
+        });
+        res.status(200).json({ token });
+    }
+    catch (error) {
+        res.status(500).json({ message: 'Error logging in', error });
+    }
+});
+exports.tokenRefresh = tokenRefresh;
