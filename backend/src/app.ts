@@ -11,12 +11,28 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors({
-  origin: 'https://task-management-system-ci2ch5joi.vercel.app/tasks', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
-  credentials: true, 
-}));
 
+// Configure CORS to allow both localhost and Vercel deployment
+const allowedOrigins = [
+  'http://localhost:5000',
+  'https://task-management-system-ci2ch5joi.vercel.app',
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+
+    // Allow if the origin is in the allowedOrigins array
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
+  credentials: true,
+}));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
