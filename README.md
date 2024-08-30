@@ -9,7 +9,7 @@ Library_management_system Pages:
 The Task Management System is designed to help users efficiently manage their tasks through a user-friendly web application. Users can register, log in, and perform various task-related actions, such as creating, viewing, editing, and deleting tasks. Each task will include a title, description, status, and due date. The frontend, built with React and TypeScript, includes pages for authentication and a task dashboard, ensuring a responsive design for both mobile and desktop devices. The backend, developed using Node.js and TypeScript, implements JWT-based authentication, CRUD operations for tasks, and a SQL database schema for storing user and task data  making the application robust and efficient.
 
 
-![Main Page](./assets/main.png)
+![Main Page](./assets/m.png)
 
 Features
 Responsive UI
