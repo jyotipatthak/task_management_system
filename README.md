@@ -1,91 +1,63 @@
-# TASK_MANAGEMENT_SYSTEM
+Task Management System
+Deployment URL::  https://task-management-system-3dtwa26q6.vercel.app/tasks 
 
-
-Deployment URL
-Front-End:https://task-management-system-3dtwa26q6.vercel.app/tasks 
-
+Frontend: Task Management System
 Overview
-Library_management_system Pages:
-The Task Management System is designed to help users efficiently manage their tasks through a user-friendly web application. Users can register, log in, and perform various task-related actions, such as creating, viewing, editing, and deleting tasks. Each task will include a title, description, status, and due date. The frontend, built with React and TypeScript, includes pages for authentication and a task dashboard, ensuring a responsive design for both mobile and desktop devices. The backend, developed using Node.js and TypeScript, implements JWT-based authentication, CRUD operations for tasks, and a SQL database schema for storing user and task data  making the application robust and efficient.
+The Task Management System is a web-based application designed to help users efficiently manage their tasks. It offers features like user registration, login, and CRUD operations for tasks, including creating, viewing, editing, and deleting tasks. Each task includes a title, description, status, and due date. The frontend is built with React and TypeScript, providing a responsive design that works seamlessly on both mobile and desktop devices. The backend is developed using Node.js and TypeScript, implementing JWT-based authentication and interacting with a SQL database to store user and task data, ensuring a robust and efficient application.
 
 
-![Main Page](./src/assets/main.png)
 
 Features
 Responsive UI
-
-Clean and responsive design for a seamless user experience.
+Clean and Responsive Design: Ensures a seamless user experience across devices.
 Authentication
+Secure System: Utilizes JWT access and refresh tokens for secure authentication.
+Task Management (CRUD Operations)
+Add Task: Users can add an unlimited number of tasks.
+Edit Task: Users can edit existing tasks, including changing their status.
+Delete Task: Users can delete tasks.
+Error Handling
+Comprehensive Error Handling: Ensures graceful recovery and detailed logging for efficient debugging and maintenance.
+Technologies Used
+Frontend
+React.js: Used for building a dynamic and interactive user interface.
+CSS: Employed for efficient and responsive designs.
+Axios: Utilized for streamlined and efficient data fetching.
+Backend
+Express.js: Used to create a robust and scalable RESTful API.
+MySQL: Employed as the database to store and retrieve data, ensuring persistent and reliable data storage.
+How to Run the Project
 
-Secure authentication system utilizing JWT access and refresh tokens.
-
-All crud operation:
-
-Add task:
-user can add any number of task.
-
-Edit task:
-user can edit any  of task made changes in status of task.
-
-Delete task:
-
-user delete task.
-
-Comprehensive error handling for graceful recovery and detailed logging for efficient debugging and maintenance.
-
-Technologies Used:
-Front-end
-React.js: Utilized React.js for building a dynamic and interactive user interface.
-
- CSS: Employed CSS for efficient and responsive designs.
-
-Query: Leveraged sql Query for streamlined and efficient data fetching.
-
-Back-end
-Express.js: Employed Express.js to create a robust and scalable RESTful API.
-
-MYSQL: Utilized MongoDB as the database to store and retrieve data, ensuring persistent and reliable data storage for the application.
-
-How to Run
-Clone the Repository:
-
+Clone the Repository
 git clone https://github.com/jyotipatthak/task_management_system/tree/main
 
-### Install the dependencies:
+Install Dependencies
+1. Frontend Dependencies:
+    cd front-end && npm install
 
-Install the dependencies of React App
-cd front-end && npm i
-Install the dependencies of express API and insert the task  into database
-cd backend && npm i && npm run start
+2. Backend Dependencies:
+    cd backend && npm install   
 
+Running the Project Locally
+1. Run the Express Server:    
+    npm run start
 
-Running the Project Locally: Navigate to the project's root directory and run the following commands
+The Express server will be accessible at http://localhost:5000. 
 
-Run the express server
-npm run start
+2. Run the React Server:
+    npm run start
 
-Run the react server
-
-npm run start
-OR
-
-The React development server will be accessible at http://localhost:3000.
-
-The Express server will be accessible at http://localhost:5000.
+ The React development server will be accessible at http://localhost:3000.
 
 API Documentation
-Explore the API endpoints and understand how to interact with the task_management_system API.
-
+Explore the API endpoints and learn how to interact with the Task Management System API. 
 
 
 Database Entity Relationship (ER) Diagram
+Visual representation of the database schema:
+![E-R DIAGRAM](./src/assets/ERR.jpg)
 
-ER-Diagram
-
-![Database Design](./src/assets/err.jpg)
 
 Developer Info
-Name: jyoti kumari
-GitHub: https://github.com/jyotipatthak
-
-
+Name: Jyoti Kumari
+GitHub: Jyoti Patthak
