@@ -9,7 +9,7 @@ const Register: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://task-management-system-fpxx.vercel.app/api/auth/register', {
+      const response = await axios.post('https://task-management-system-fpxx-d5s26lcmz.vercel.app/api/auth/register', {
         username,
         email,
         password,
