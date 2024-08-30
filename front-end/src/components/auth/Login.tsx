@@ -8,7 +8,7 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://task-management-system-fpxx.vercel.app/api/auth/login', { email, password });
 
       // Save tokens to localStorage
       localStorage.setItem('token', response.data.token);

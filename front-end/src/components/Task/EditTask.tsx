@@ -47,7 +47,7 @@ const EditTask: React.FC = () => {
     e.preventDefault();
     try {
       await axios.put(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://task-management-system-fpxx.vercel.app/api/tasks/${id}`,
         {
           title,
           description,

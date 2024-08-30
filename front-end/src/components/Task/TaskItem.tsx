@@ -15,7 +15,7 @@ const TaskItem: React.FC<{ task: Task }> = ({ task }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${task.id}`, {
+      await axios.delete(`https://task-management-system-fpxx.vercel.app/api/tasks/${task.id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

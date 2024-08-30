@@ -13,7 +13,7 @@ const AddTask = () => {
     e.preventDefault();
     try {
       await axiosInstance.post(
-        'http://localhost:5000/api/tasks',
+        'https://task-management-system-fpxx.vercel.app/api/tasks',
         {
           title,
           description,

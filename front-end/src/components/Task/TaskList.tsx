@@ -18,7 +18,7 @@ const TaskList: React.FC = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/tasks', {
+        const response = await axios.get('https://task-management-system-fpxx.vercel.app/api/tasks', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

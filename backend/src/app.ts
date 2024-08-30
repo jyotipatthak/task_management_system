@@ -15,7 +15,7 @@ app.use(express.json());
 // Configure CORS to allow both localhost and Vercel deployment
 const allowedOrigins = [
   'http://localhost:5000',
-  'https://task-management-system-ci2ch5joi.vercel.app',
+  'https://task-management-system-8hqz4gcka.vercel.app/tasks',
 ];
 
 app.use(cors({
