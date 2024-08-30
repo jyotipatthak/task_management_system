@@ -10,30 +10,13 @@ const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
 const taskRoutes_1 = __importDefault(require("./routes/taskRoutes"));
 const errorHandler_1 = __importDefault(require("./middleware/errorHandler"));
 const cors_1 = __importDefault(require("cors"));
+const swagger_1 = require("./config/swagger"); // Adjust the path as neede
 dotenv_1.default.config();
 const app = (0, express_1.default)();
+(0, swagger_1.setupSwagger)(app);
 app.use(express_1.default.json());
-// Configure CORS to allow both localhost and Vercel deployment
-const allowedOrigins = [
-    'http://localhost:5000',
-    'https://task-management-system-8hqz4gcka.vercel.app/tasks',
-];
-app.use((0, cors_1.default)({
-    origin: function (origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl requests)
-        if (!origin)
-            return callback(null, true);
-        // Allow if the origin is in the allowedOrigins array
-        if (allowedOrigins.includes(origin)) {
-            callback(null, true);
-        }
-        else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
-}));
+// CORS configuration: Allow all origins
+app.use((0, cors_1.default)());
 app.use('/api/auth', authRoutes_1.default);
 app.use('/api/tasks', taskRoutes_1.default);
 app.use(errorHandler_1.default);
