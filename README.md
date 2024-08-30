@@ -1,4 +1,4 @@
-TASK_MANAGEMENT_SYSTEM
+# TASK_MANAGEMENT_SYSTEM
 
 
 Deployment URL
@@ -53,18 +53,19 @@ git clone https://github.com/jyotipatthak/task_management_system/tree/main
 
 ### Install the dependencies:
 
-## Install the dependencies of React App
+Install the dependencies of React App
 cd front-end && npm i
-## Install the dependencies of express API and insert the task  into database
+Install the dependencies of express API and insert the task  into database
 cd backend && npm i && npm run start
 
 
 Running the Project Locally: Navigate to the project's root directory and run the following commands
 
-## Run the express server
+Run the express server
 npm run start
 
-## Run the react server
+Run the react server
+
 npm run start
 OR
 
