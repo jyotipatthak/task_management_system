@@ -16,7 +16,7 @@ app.use(express.json());
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://task-management-system-fpxx-h1ww6nyuk.vercel.app'
+    'https://task-management-system-pi-three.vercel.app'
   ]
 };
 
