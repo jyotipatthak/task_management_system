@@ -1,4 +1,4 @@
-Task Management System
+# Task Management System
 Deployment URL::  https://task-management-system-3dtwa26q6.vercel.app/tasks 
 
 Frontend: Task Management System
@@ -28,7 +28,8 @@ Express.js: Used to create a robust and scalable RESTful API.
 MySQL: Employed as the database to store and retrieve data, ensuring persistent and reliable data storage.
 How to Run the Project
 
-Clone the Repository
+Clone the Repository:
+
 git clone https://github.com/jyotipatthak/task_management_system/tree/main
 
 Install Dependencies
@@ -50,11 +51,13 @@ The Express server will be accessible at http://localhost:5000.
  The React development server will be accessible at http://localhost:3000.
 
 API Documentation
+
 Explore the API endpoints and learn how to interact with the Task Management System API. 
 
 
 Database Entity Relationship (ER) Diagram
 Visual representation of the database schema:
+
 ![E-R DIAGRAM](./src/assets/ERR.jpg)
 
 
