@@ -50,18 +50,21 @@ How to Run
 Clone the Repository:
 
 git clone https://github.com/jyotipatthak/task_management_system/tree/main
-Install the dependencies:
 
-# Install the dependencies of React App
+### Install the dependencies:
+
+## Install the dependencies of React App
 cd front-end && npm i
-# Install the dependencies of express API and insert the movies and series data into database
+## Install the dependencies of express API and insert the task  into database
 cd backend && npm i && npm run start
+
+
 Running the Project Locally: Navigate to the project's root directory and run the following commands
 
-# Run the express server
+## Run the express server
 npm run start
 
-# Run the react server
+## Run the react server
 npm run start
 OR
 
@@ -75,6 +78,7 @@ Explore the API endpoints and understand how to interact with the task_managemen
 
 
 Database Entity Relationship (ER) Diagram
+
 ER-Diagram
 
 ![Database Design](./src/assets/err.jpg)
