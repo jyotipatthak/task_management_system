@@ -44,5 +44,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "https://task-management-system-fpxx-d5s26lcmz.vercel.app"
 }

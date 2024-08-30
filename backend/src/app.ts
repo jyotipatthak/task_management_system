@@ -12,15 +12,8 @@ const app = express();
 
 app.use(express.json());
 
-// CORS configuration
-const corsOptions = {
-  origin: [
-    'http://localhost:3000',
-    'https://task-management-system-pi-three.vercel.app'
-  ]
-};
-
-app.use(cors(corsOptions));
+// CORS configuration: Allow all origins
+app.use(cors());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
