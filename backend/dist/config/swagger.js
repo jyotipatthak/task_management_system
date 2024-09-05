@@ -16,7 +16,8 @@ const options = {
         },
         servers: [
             {
-                url: 'https://task-management-system-qrgm.onrender.com', // Replace with your server URL
+                // url: 'https://task-management-system-qrgm.onrender.com', // Replace with your server URL
+                url: 'http://localhost:5000', // Replace with your server URL
             },
         ],
     },
@@ -24,6 +25,6 @@ const options = {
 };
 const swaggerSpec = (0, swagger_jsdoc_1.default)(options);
 const setupSwagger = (app) => {
-    app.use('/api-docs', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerSpec));
+    app.use('/docs', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerSpec));
 };
 exports.setupSwagger = setupSwagger;

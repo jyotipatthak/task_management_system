@@ -1,47 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
-import Register from './components/auth/Register';
-import Login from './components/auth/Login';
-import TaskList from './components/Task/TaskList';
-import AddTask from './components/Task/AddTask';
-import EditTask from './components/Task/EditTask';
+import UserList from './components/user/UserList';
+import AddUser from './components/user/AddUser';
+import EditUser from './components/user/EditUser';
 
 const App = () => {
-  const isLoggedIn = !!localStorage.getItem('token');
-
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('refreshToken');
-    window.location.href = '/login';  // Redirect to login page
-  };
 
   return (
     <Router>
       <nav style={styles.navbar}>
         <div style={styles.navLeft}>
-          <Link to="/tasks" style={styles.navLink}>Task Management System</Link>
+          <Link to="/" style={styles.navLink}>User Management System</Link>
         </div>
         <div style={styles.navRight}>
-          {isLoggedIn ? (
-            <>
-              <Link to="/tasks" style={styles.addTaskButton}>My Tasks</Link>
-              <button onClick={handleLogout} style={styles.logoutButton}>Logout</button>
-            </>
-          ) : (
-            <>
-              <Link to="/register" style={styles.navLink}>Register</Link>
-              <Link to="/login" style={styles.navLink}>Login</Link>
-            </>
-          )}
+          <Link to="/" style={styles.addTaskButton}>User Lists</Link>
         </div>
       </nav>
       <Routes>
-        <Route path="/" element={<Navigate to="/tasks" />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/tasks" element={<TaskList />} />
-        <Route path="/tasks/add" element={<AddTask />} />
-        <Route path="/tasks/edit/:id" element={<EditTask />} />
+        <Route path="/" element={<UserList />} />
+        <Route path="/add" element={<AddUser />} />
+        <Route path="/edit/:id" element={<EditUser />} />
       </Routes>
     </Router>
   );

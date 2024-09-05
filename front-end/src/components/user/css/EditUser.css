@@ -1,6 +1,6 @@
-/* EditTask.css */
+/* Edituser.css */
 
-.edit-task-container {
+.edit-user-container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -13,16 +13,16 @@
     border: 1px solid #ddd; /* Added border for subtle definition */
   }
   
-  .edit-task-container h2 {
+  .edit-user-container h2 {
     color: #333;
     font-size: 1.8rem; /* Slightly larger font size */
     margin-bottom: 10px;
      /* Center-align the heading */
   }
   
-  .edit-task-container input,
-  .edit-task-container textarea,
-  .edit-task-container select {
+  .edit-user-container input,
+  .edit-user-container textarea,
+  .edit-user-container select {
     width: 100%;
     padding: 10px; /* Increased padding for more comfortable input */
     margin-bottom: 10px; /* Increased margin for better spacing */
@@ -31,12 +31,12 @@
     font-size: 1rem; /* Larger font size for readability */
   }
   
-  .edit-task-container textarea {
+  .edit-user-container textarea {
     height: 30px; /* Slightly increased height */
     resize: vertical;
   }
   
-  .edit-task-container button {
+  .edit-user-container button {
     background-color: #28a745; /* Green background */
     color: #fff;
     border: none;
@@ -47,12 +47,12 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  .edit-task-container button:hover {
+  .edit-user-container button:hover {
     background-color: #218838; /* Darker green on hover */
     transform: translateY(-2px); /* Slight lift effect on hover */
   }
   
-  .edit-task-container button:focus {
+  .edit-user-container button:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5);
   }

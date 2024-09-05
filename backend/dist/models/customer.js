@@ -32,6 +32,6 @@ Customer.init({
     },
 }, {
     sequelize: database_1.default,
-    tableName: 'customers',
+    tableName: 'users',
 });
 exports.default = Customer;
