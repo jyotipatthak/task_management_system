@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const database_1 = __importDefault(require("./config/database"));
-const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
+const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
+const taskRoutes_1 = __importDefault(require("./routes/taskRoutes"));
 const errorHandler_1 = __importDefault(require("./middleware/errorHandler"));
 const cors_1 = __importDefault(require("cors"));
 const swagger_1 = require("./config/swagger"); // Adjust the path as neede
@@ -16,7 +17,8 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 // CORS configuration: Allow all origins
 app.use((0, cors_1.default)());
-app.use('/', userRoutes_1.default);
+app.use('/api/auth', authRoutes_1.default);
+app.use('/api/tasks', taskRoutes_1.default);
 app.use(errorHandler_1.default);
 database_1.default.sync({ force: false }).then(() => {
     console.log('Database & tables created!');

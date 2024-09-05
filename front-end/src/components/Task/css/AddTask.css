@@ -1,6 +1,6 @@
-/* Adduser.css */
+/* AddTask.css */
 
-.add-user-form {
+.add-task-form {
     max-width: 600px;
     margin: 20px auto;
     
@@ -10,9 +10,9 @@
     background-color: #f9f9f9;
   }
   
-  .add-user-form input,
-  .add-user-form textarea,
-  .add-user-form select {
+  .add-task-form input,
+  .add-task-form textarea,
+  .add-task-form select {
     display: block;
     width: 100%;
     padding: 10px;
@@ -21,7 +21,7 @@
     border-radius: 4px;
   }
   
-  .add-user-form button {
+  .add-task-form button {
     background-color: #28a745;
     color: white;
     border: none;
@@ -31,7 +31,7 @@
     font-size: 16px;
   }
   
-  .add-user-form button:hover {
+  .add-task-form button:hover {
     background-color: #0056b3;
   }
   

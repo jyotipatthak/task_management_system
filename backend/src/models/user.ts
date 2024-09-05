@@ -1,10 +1,9 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../config/database';
 
-class Customer extends Model {
+class User extends Model {
   public id!: number;
-  public firstName!: string;
-  public lastName!: string;
+  public username!: string;
   public email!: string;
   public password!: string;
 
@@ -12,18 +11,14 @@ class Customer extends Model {
   public readonly updatedAt!: Date;
 }
 
-Customer.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER.UNSIGNED,
       autoIncrement: true,
       primaryKey: true,
     },
-    firstName: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-    },
-    lastName: {
+    username: {
       type: DataTypes.STRING(50),
       allowNull: false,
     },
@@ -32,15 +27,15 @@ Customer.init(
       allowNull: false,
       unique: true,
     },
-    department: {
-      type: DataTypes.STRING(100),
+    password: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
   {
     sequelize,
-    tableName: 'customers',
+    tableName: 'users',
   }
 );
 
-export default Customer;
+export default User;
